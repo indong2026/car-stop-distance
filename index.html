@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자동차 제동거리 시뮬레이터</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🚗 자동차 제동거리 시뮬레이터</h1>
+
+  <div class="controls">
+    <div class="inputBox">
+      <label>속도</label>
+      <input type="range" id="speed" min="0" max="150" value="60">
+      <span id="speedValue">60 km/h</span>
+    </div>
+
+    <div class="inputBox">
+      <label>앞차 거리 (m)</label>
+      <input type="number" id="distance" value="65">
+    </div>
+
+    <div class="inputBox">
+      <label>감속도 (m/s²)</label>
+      <input type="number" id="acc" value="6">
+    </div>
+
+    <div class="inputBox">
+  <label>날씨</label>
+  <select id="weather">
+    <option value="8">맑음 ☀️</option>
+    <option value="5">비 🌧️</option>
+    <option value="3">눈 ❄️</option>
+  </select>
+</div>
+
+    <button id="checkBtn">제동거리 계산</button>
+    <button id="startBtn">시뮬레이션 시작</button>
+  </div>
+
+  <h2 id="result"></h2>
+
+  <div id="road">
+    <div id="brakeZone"></div>
+    <div id="myCar">🚗</div>
+    <div id="enemyCar">🚙</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
